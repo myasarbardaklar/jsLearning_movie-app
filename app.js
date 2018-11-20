@@ -1,7 +1,7 @@
 class MovieApp {
 
   constructor() {
-    // dom objects
+    // get dom objects
     this.form      = document.querySelector('form#addMovie-form');
     this.movieList = document.querySelector('.movieList');
 
@@ -70,21 +70,21 @@ class MovieApp {
 
   createDOM(movieID, movieTitle, movieDirector, moviePoster) {
     // create column
-    let column = document.createElement('div');
+    let column       = document.createElement('div');
     column.className = 'col-md-3';
-    column.style = 'padding-top: 15px; padding-bottom: 15px;';
+    column.style     = 'padding-top: 15px; padding-bottom: 15px;';
 
     // create card
-    let card = document.createElement('div');
+    let card       = document.createElement('div');
     card.className = 'card';
 
     // create card image
-    let card_image = document.createElement('img');
+    let card_image       = document.createElement('img');
     card_image.className = 'card-img-top';
-    card_image.src = moviePoster;
+    card_image.src       = moviePoster;
 
     // create card body
-    let card_body = document.createElement('div');
+    let card_body       = document.createElement('div');
     card_body.className = 'card-body';
     card_body.innerHTML = `
       <h5 class="card-title">${movieTitle}</h5>
@@ -170,4 +170,5 @@ class MovieApp {
 
 }
 
+// run app
 const app = new MovieApp();
